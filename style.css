@@ -18,7 +18,58 @@ body {
     margin-right: -10px;
     margin-top: -10px;
 }
+#search-container {
+    display: flex;
+    margin-left: auto;
+    align-items: center; 
+    background-color: #f8f8f8; 
+    border-radius: 5px; 
+    padding: 0.5rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
 
+#search-input {
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 0.5rem; 
+    font-size: 16px; 
+}
+
+#search-btn {
+    background-color: rgb(16, 123, 159); 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    font-size: 16px; 
+    cursor: pointer; 
+}
+
+#search-btn:hover {
+    background-color: #0056b3; 
+}
+#description-container {
+    padding: 1.5px;
+    margin: auto;
+    max-width: 900px;
+    text-align: center; 
+}
+
+h2 {
+    font-size: 28px; 
+    color: black; 
+    text-align: center; 
+    
+}
+
+#description-container p {
+    font-size: 20px; 
+    line-height: 1.8;
+    color: black; 
+    text-align: center; 
+    
+}
 .stats-container {
     display: flex;
     align-items: center;

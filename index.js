@@ -209,3 +209,30 @@ secondpar.innerHTML = `${secondgame.name}`;
 secondGameContainer.appendChild(secondpar);
 
 
+
+
+
+
+// Customizations
+
+const searchBtn = document.getElementById('search-btn');
+const searchInput = document.getElementById('search-input');
+
+searchBtn.addEventListener('click', () => searchGames());
+
+searchInput.addEventListener('keypress', event => {
+    if (event.key === 'Enter') {
+        searchGames();
+    }
+});
+
+
+function searchGames() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredGames = GAMES_JSON.filter(game => 
+        game.name.toLowerCase().includes(searchTerm) ||
+        (game.description && game.description.toLowerCase().includes(searchTerm)) 
+    );
+    deleteChildElements(gamesContainer);
+    addGamesToPage(filteredGames);
+}
